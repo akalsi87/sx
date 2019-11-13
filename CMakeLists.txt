@@ -211,7 +211,9 @@ elseif(APPLE)
     endif()
 endif()
 
-include(GNUInstallDirs)
+#include(GNUInstallDirs)
+set(CMAKE_INSTALL_LIBDIR lib)
+set(CMAKE_INSTALL_BINDIR bin)
 
 target_include_directories(sx PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>
